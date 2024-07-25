@@ -1,0 +1,123 @@
+.modal__wrapper {
+  color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  .modal {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    height: 350px;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__body {
+      width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    &__close {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 30px;
+      top: 24px;
+    }
+
+    &__verification {
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid black;
+      display: inline-block;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+      padding: 10px 20px;
+      font-size: 22px;
+      max-width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      margin-bottom: 15px;
+    }
+
+    &__button {
+      padding: 16px 20px;
+      max-width: 100%;
+      margin-top: 30px;
+      border: 1px solid transparent;
+      transition: all 0.9s;
+      color: #fff;
+      background-color: black;
+      font-size: 22pxSearshSearsh;
+
+      &:hover {
+        transition: all 0.9s;
+        background: transparent;
+        border: 1px solid black;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .modal__wrapper {
+    .modal {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    .modal__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .modal__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal__verification {
+      font-size: 18px;
+    }
+
+    .modal__input {
+      font-size: 18px;
+    }
+    .modal__button{
+      margin-top: 10px;
+    }
+  }
+}

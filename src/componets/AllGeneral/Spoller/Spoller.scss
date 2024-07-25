@@ -1,0 +1,46 @@
+.spoller {
+  padding: 25px 20px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    display: inline-block;
+    border-bottom: 1px dashed #404040;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    color: #404040;
+    cursor: pointer;
+
+    &.open {
+      border-bottom: none;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    color: #565656;
+  }
+
+  &__body {
+    height: 0px;
+    overflow: hidden;
+    transition: height 500ms ease;
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #2F80ED;
+    margin-top: 20px;
+  }
+}

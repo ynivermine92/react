@@ -1,0 +1,58 @@
+// ************************ Модальное окно ************************ //
+.modalThank__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display: none;
+    &.active{
+        display: flex;
+    }
+
+    .modalThank {
+        background: white;
+        padding: 25px;
+        border-radius: 5px;
+        height: 350px;
+        max-width: 400px;
+
+        &__title {
+            text-align: center;
+            font-size: 26px;
+            color: red;
+            padding-top: 20px;
+        }
+        &__body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70%;
+        }
+        &__text{
+            font-size: 24px;
+        }
+        &__close {
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+// ************************ Кнопка вызова модального окна ************************ //
+.modalThank__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}

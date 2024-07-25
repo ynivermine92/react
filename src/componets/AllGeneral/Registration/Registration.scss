@@ -1,0 +1,129 @@
+.modalRegist__wrapper {
+  color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  &.active {
+    display: flex;
+  }
+
+
+  .modalRegist {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    height: 350px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__body {
+      width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    &__close {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 30px;
+      font-size: 20px;
+      top: 24px;
+    }
+
+    &__regist {
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border-bottom: 1px solid black;
+      display: inline-block;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+      padding: 10px 20px;
+      max-width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    &__button {
+      padding: 16px 20px;
+      max-width: 100%;
+      margin-top: 30px;
+      font-size: 20px;
+      border: 1px solid transparent;
+      transition: all 0.9s;
+      color: #fff;
+      background-color: black;
+
+      &:hover {
+        transition: all 0.9s;
+        background: transparent;
+        border: 1px solid black;
+        color: #000;
+      }
+    }
+  }
+}
+
+.modalRegist__wrapper .modalRegist__input {
+  width: 100%;
+}
+
+
+
+@media (max-width: 650px) {
+  .modalRegist__wrapper {
+    .modalRegist {
+      max-width: 320px;
+    }
+    .modalRegist__title{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .modalRegist__body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .modalRegist__regist{
+      font-size: 16px;
+    }
+    .modalRegist__input{
+      font-size: 18px;
+    }
+    .modalRegist__button{
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+
+
+
+}
